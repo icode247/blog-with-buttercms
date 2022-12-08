@@ -1,0 +1,6 @@
+const router = require("express").Router();
+const { getBlogs, createBlog, getBlog } = require("../controllers");
+
+router.route("/blogs").get(getBlogs).get(getBlog);
+
+module.exports = router;

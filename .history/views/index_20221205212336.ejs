@@ -1,0 +1,18 @@
+<%- include('./header.ejs') %>
+    <div class="container">
+      <div class="row" style="margin-top:6rem">
+        <h4>Blogs</h4>
+        <% data.forEach(blog =>{ %>
+        <div class="col-4 mb-4">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <img src="<%= blog.featured_image %>" class="card-img-top" alt="...">
+              <h5 class="card-title"><a href="/blog/<%= blog.slug %>"><%= blog.title %></a></h5>
+            </div>
+          </div>
+        </div>
+      <%}) %>
+      </div>
+    </div>
+  </body>
+</html>
