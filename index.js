@@ -24,7 +24,6 @@ function renderPost(req, res) {
   var slug = req.params.slug;
 
   butter.post.retrieve(slug).then(function (resp) {
-    console.log(resp.data);
     res.render("post.ejs", resp.data);
   });
 }
